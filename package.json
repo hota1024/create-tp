@@ -4,7 +4,8 @@
   "version": "0.0.0",
   "author": "hota1024 @hota1024",
   "bin": {
-    "ctp": "./bin/run"
+    "ctp": "./bin/run",
+    "create-tp": "./bin/run"
   },
   "bugs": "https://github.com/hota1024/create-tp/issues",
   "dependencies": {
