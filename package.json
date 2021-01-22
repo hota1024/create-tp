@@ -12,6 +12,7 @@
     "@oclif/command": "^1",
     "@oclif/config": "^1",
     "@oclif/plugin-help": "^3",
+    "@octokit/rest": "^18.0.14",
     "inquirer": "^7.3.3",
     "tslib": "^1"
   },
