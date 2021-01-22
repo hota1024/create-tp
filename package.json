@@ -13,6 +13,7 @@
     "@oclif/config": "^1",
     "@oclif/plugin-help": "^3",
     "@octokit/rest": "^18.0.14",
+    "@types/cli-progress": "^3.8.0",
     "@types/fs-extra": "^9.0.6",
     "axios": "^0.21.1",
     "cli-progress": "^3.8.2",
