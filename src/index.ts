@@ -10,24 +10,43 @@ class CreateTp extends Command {
     help: flags.help({ char: 'h' }),
     lib: flags.boolean({ char: 'l' }),
     code: flags.boolean({ char: 'c' }),
-    templateRepository: flags.string({ char: 't' }),
+    template: flags.string({
+      char: 't',
+      options: ['project', 'lib', 'next', 'next-material'],
+    }),
+    repo: flags.string({ char: 'r' }),
   }
 
   static args = [{ name: 'name' }]
 
-  static projectTemplateRepository = 'hota1024/npm-package-template'
-
-  static libraryTemplateRepository = 'hota1024/npm-package-template'
+  static templates = {
+    project: 'hota1024/npm-package-template',
+    lib: 'hota1024/npm-package-template',
+    next: 'hota1024/next-app-template',
+    'next-material': 'hota1024/next-material-ui-template',
+  }
 
   async run(): Promise<void> {
     const { args, flags } = this.parse(CreateTp)
 
-    const path = await this.createProject(
-      flags.templateRepository || flags.lib
-        ? CreateTp.libraryTemplateRepository
-        : CreateTp.projectTemplateRepository,
-      args.name
-    )
+    let templateRepository = ''
+
+    if (flags.repo) {
+      templateRepository = flags.repo
+    } else if (flags.template) {
+      templateRepository = (CreateTp.templates as { [k: string]: string })[
+        flags.template
+      ]
+      if (!templateRepository) {
+        this.error(`${flags.template} is not a template name`)
+      }
+    } else if (flags.lib) {
+      templateRepository = CreateTp.templates.lib
+    } else {
+      templateRepository = CreateTp.templates.project
+    }
+
+    const path = await this.createProject(templateRepository, args.name)
 
     if (path) {
       if (flags.code) {

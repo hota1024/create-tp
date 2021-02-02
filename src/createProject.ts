@@ -82,7 +82,7 @@ const download = async (
   path: RepositoryPathInfo,
   ref: string
 ): Promise<void> => {
-  cli.action.start(chalk.cyan`⬇️ fetching the latest template`)
+  cli.action.start(chalk.cyan`⬇️  fetching the latest template`)
 
   const octokit = new Octokit()
 
@@ -240,9 +240,13 @@ const setupProject = async (
         : ctpJson.hooks.created
 
     for (const command of commands) {
-      console.log(command)
+      const matches = command.match(/"[^"]+"|'[^']+'|\S+/g)
+      if (!matches) {
+        continue
+      }
+
       await new Promise((resolve) => {
-        const p = spawn(command, {
+        const p = spawn(matches[0], matches.slice(1), {
           cwd: projectPath,
           stdio: 'inherit',
         })
