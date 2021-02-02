@@ -1,7 +1,7 @@
 {
   "name": "create-tp",
   "description": "create typescript package",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "author": "hota1024 @hota1024",
   "bin": {
     "ctp": "./bin/run",
@@ -13,9 +13,6 @@
     "@oclif/config": "^1",
     "@oclif/plugin-help": "^3",
     "@octokit/rest": "^18.0.14",
-    "@types/cli-progress": "^3.8.0",
-    "@types/fs-extra": "^9.0.6",
-    "@types/glob": "^7.1.3",
     "axios": "^0.21.1",
     "chalk": "^4.1.0",
     "change-case": "^4.1.2",
@@ -29,8 +26,11 @@
   },
   "devDependencies": {
     "@oclif/dev-cli": "^1",
+    "@types/cli-progress": "^3.8.0",
+    "@types/fs-extra": "^9.0.6",
+    "@types/glob": "^7.1.3",
     "@types/inquirer": "^7.3.1",
-    "@types/node": "^10",
+    "@types/node": "^14.14.22",
     "@typescript-eslint/eslint-plugin": "^4.14.0",
     "@typescript-eslint/parser": "^4.14.0",
     "eslint": "^7.18.0",
