@@ -19,7 +19,7 @@ $ npm install -g create-tp
 $ ctp COMMAND
 running command...
 $ ctp (-v|--version|version)
-create-tp/0.0.1 darwin-x64 node-v15.5.1
+create-tp/0.0.2 darwin-x64 node-v15.5.1
 $ ctp --help [COMMAND]
 USAGE
   $ ctp COMMAND
