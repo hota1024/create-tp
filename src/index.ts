@@ -21,6 +21,7 @@ class CreateTp extends Command {
 
   static templates = {
     project: 'hota1024/npm-package-template',
+    reactlib: 'hota1024/react-library-template',
     lib: 'hota1024/npm-package-template',
     next: 'hota1024/next-app-template',
     'next-material': 'hota1024/next-material-ui-template',
