@@ -12,7 +12,7 @@ class CreateTp extends Command {
     code: flags.boolean({ char: 'c' }),
     template: flags.string({
       char: 't',
-      options: ['project', 'lib', 'reactlib', 'next', 'next-material'],
+      options: ['project', 'lib', 'reactlib', 'next', 'nest', 'next-material'],
     }),
     repo: flags.string({ char: 'r' }),
   }
