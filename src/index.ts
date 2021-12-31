@@ -24,6 +24,7 @@ class CreateTp extends Command {
     reactlib: 'hota1024/react-library-template',
     lib: 'hota1024/npm-package-template',
     next: 'hota1024/next-app-template',
+    nest: 'hota1024/nest-app-template',
     'next-material': 'hota1024/next-material-ui-template',
   }
 
