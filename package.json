@@ -1,7 +1,7 @@
 {
   "name": "create-tp",
   "description": "create typescript package",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "author": "hota1024 @hota1024",
   "bin": {
     "ctp": "./bin/run",

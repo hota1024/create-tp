@@ -19,7 +19,7 @@ $ npm install -g create-tp
 $ ctp COMMAND
 running command...
 $ ctp (-v|--version|version)
-create-tp/0.0.5 linux-x64 node-v16.13.1
+create-tp/0.0.6 linux-x64 node-v16.13.1
 $ ctp --help [COMMAND]
 USAGE
   $ ctp COMMAND
