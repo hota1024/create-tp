@@ -12,7 +12,15 @@ class CreateTp extends Command {
     code: flags.boolean({ char: 'c' }),
     template: flags.string({
       char: 't',
-      options: ['project', 'lib', 'reactlib', 'next', 'nest', 'next-material'],
+      options: [
+        'project',
+        'lib',
+        'reactlib',
+        'next',
+        'next12',
+        'nest',
+        'next-material',
+      ],
     }),
     repo: flags.string({ char: 'r' }),
   }
@@ -23,7 +31,8 @@ class CreateTp extends Command {
     project: 'hota1024/npm-package-template',
     reactlib: 'hota1024/react-library-template',
     lib: 'hota1024/npm-package-template',
-    next: 'hota1024/next-app-template',
+    next12: 'hota1024/next-app-template',
+    next: 'hota1024/next13-app-template',
     nest: 'hota1024/nest-app-template',
     'next-material': 'hota1024/next-material-ui-template',
   }

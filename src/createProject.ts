@@ -219,9 +219,14 @@ const setupProject = async (
           } else {
             for (const [caseName, caseString] of Object.entries(cases)) {
               content = content.replaceAll(`{${key}.${caseName}}`, caseString)
+              content = content.replaceAll(
+                `--ctp--${key}.${caseName}`,
+                caseString
+              )
             }
 
             content = content.replaceAll(`{${key}}`, value)
+            content = content.replaceAll(`--ctp--${key}`, value)
           }
 
           await fs.writeFile(path, content)
